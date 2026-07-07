@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة التقنية </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/alomda.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+     <script>
+        window.onload = function(){
+            setTimeout(function(){
+
+                document.getElementById("loading").style.display = "none";
+            },2000);
+        };
+    </script>
+</head>
+<body>
+
+<div class="" id="loading">
+        <img width="90" src="images/hearts.svg" alt="">
+    </div
+    
+  <div class="main-wrapper">
+    <nav class="fixed-top">
+        <header class="header d-flex justify-content-between py-1">
+
+
+            <div class="right-header d-flex align-items-center gap-3">
+               <div class="logo d-none d-md-block">
+                <a href="/">لوحة تحكم المدرسية</a>
+               </div>
+
+               <div class="px-3">
+                <a href="#"><i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+               </div>
+               <form action="" class="d-none d-md-block">
+                <input type="text" class="form-control" placeholder="اكتب  ما تريد البحث عنه">
+               </form>
+            </div>
+
+
+
+            <div class="left-header d-flex align-items-center gap-3 px-3">
+                <div class="icons d-flex gap-3">
+                    <a href=""><i class="fa-regular fa-comment"></i></a>
+                    <a class="position-relative massge"  href=""><i class="fa-regular fa-envelope"></i></a>
+                    <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                    <a href=""><i class="fa-regular fa-moon"></i></a>
+                </div>
+
+
+                <div class="avatar">
+                    <img  src="images/avatar.png" alt="">
+                </div>
+
+                
+               <a data-bs-toggle="offcanvas" href="#user-online" ><i class="fa-solid fa-bars-staggered active-user"></i></a>
+
+            </div>
+        </header>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="profile mb-3">
+            <img src="images/avatar.png" alt="">
+            <h3>عمار العلي</h3>
+        </div>
+        <div class="ul-sidebar">
+            <ul>
+                <li class="mb-2">
+                    <i class="fa-regular fa-house fs-5"></i>
+                    <a href="/" class="m-r-10">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2">
+                   <i class="fa-solid fa-key"></i>
+                    <a href="" class="m-r-10">الصلاحيات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-users"></i>
+                    <a href="students.html" class="m-r-10">كافة الطلاب</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <a href="" class="m-r-10">المدرسين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="" class="m-r-10">المستخدمين </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="" class="m-r-10">الكتب الدراسية </a>
+                </li>
+                  <li class="mb-2">
+                    <i class="fa-solid fa-blog"></i>
+                    <a href="blog.html" class="m-r-10">المدونة</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gears"></i>
+                    <a href="" class="m-r-10">الإعدادات</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content p-3" id="content">
+        <div class="inner-content">
+            <div class="container-fluid">
+                <h4>كافة المدونات </h4>
+                <a href="add-post.html" type="button" class="btn btn-primary  my-3" >
+                    إضافة مدونة جديدة   
+                    </a>
+                <div class="row">
+                    <div class="col">
+                        <div class="card p-3">
+                     <table id="example" class="table table-striped table-hover display">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">عنوان المقال</th>
+                            <th scope="col">التصنيف</th>
+                            <th scope="col">تاريخ النشر </th>
+                            <th scope="col">الحالة</th>
+                            <th scope="col">الصورة</th>
+                            <th scope="col">العمليات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>تأثير الذكاء الإصطناعي </td>
+                            <td>الذكاء الإصطناعي</td>
+                            <td>2/7/2026</td>
+                            <td>
+                             <div class="form-check form-switch">
+                                <input class="form-check-input" role="switch" type="checkbox" value="" id="checkNativeSwitch" checked>
+                                <label class="form-check-label" for="checkNativeSwitch">
+                                    تفعيل 
+                                </label>
+                                </div>
+                            </td>
+                            <td>
+                                <img class="rounded-circle" width="60" src="images/blog1.jpg" alt="">
+                            </td>
+                              <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">عرض المقال</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-blog" data-bs-toggle="modal">حذف المقال</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>فوائد برامج الحماية</td>
+                            <td>الأمن السيبراني</td>
+                            <td>3/7/2026</td>
+                            <td>
+                             <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
+                                <label class="form-check-label" for="checkNativeSwitch">
+                                    تفعيل 
+                                </label>
+                                </div>
+                            </td>
+                            <td>
+                                <img class="rounded-circle" width="60" src="images/blog2.jpg" alt="">
+                            </td>
+                              <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">عرض المقال</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-blog" data-bs-toggle="modal">حذف المقال</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>ثغرات سبرانية</td>
+                            <td>الأمن السيبراني</td>
+                            <td>3/7/2026</td>
+                            <td>
+                             <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" value="" id="checkNativeSwitch" switch>
+                                <label class="form-check-label" for="checkNativeSwitch">
+                                    تفعيل 
+                                </label>
+                                </div>
+                            </td>
+                            <td>
+                                <img class="rounded-circle" width="60" src="images/blog2.jpg" alt="">
+                            </td>
+                              <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">عرض المقال</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-blog" data-bs-toggle="modal">حذف المقال</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                          
+                        
+                        </tbody>
+                        </table>
+
+                        </div>
+                    </div>
+                </div>
+      
+               
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- start delete bolg -->
+   
+<!-- Modal -->
+<div class="modal fade" id="delete-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">حذف المقال</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <form >
+            <div class="alert alert-danger">
+         هل أنت متأكد من عملية حذف المقال  
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                 <button type="button" class="btn btn-primary">حذف المقال</button>
+             </div>
+          
+       </form>
+  
+      </div>
+      
+    </div>
+  </div>
+</div>
+  <!-- end delete blog -->
+
+
+               <!-- user online list -->
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="user-online" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                       <div style="width: 10px; height: 10px;" class="spinner-grow text-success mx-2" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                            
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين النشطين </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="item-side-menu mb-2">
+
+                        
+                        <div class="info-users position-relative">
+                            <img src="images/avatar.png" alt=""> 
+                            <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <h4>عمار العلي</h4>
+                        </div>
+                        <div class="contact-users">
+                            <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
+                            <i class="fa-brands fa-facebook-messenger icon-messenger"></i>
+                        </div>
+                     </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+<script src="assets/js/datatables.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   <script src="assets/js/charts.js"></script>
+   <script src="assets/js/bootstrap.js"></script> 
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/tablesrsepons.js"></script>
+</body>
+</html>

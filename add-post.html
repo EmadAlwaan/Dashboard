@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة مقال جديد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/alomda.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/css/select2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/48.3.0/ckeditor5.css">
+    <style>
+        .ck-editor__editable{
+            height: 350px !important;
+        }
+    </style>
+
+     <script>
+        window.onload = function(){
+            setTimeout(function(){
+
+                document.getElementById("loading").style.display = "none";
+            },2000);
+        };
+    </script>
+</head>
+<body>
+
+     <div class="" id="loading">
+        <img width="90" src="images/hearts.svg" alt="">
+    </div>
+    
+  <div class="main-wrapper">
+    <nav class="fixed-top">
+        <header class="header d-flex justify-content-between py-1">
+
+
+            <div class="right-header d-flex align-items-center gap-3">
+               <div class="logo d-none d-md-block">
+                <a href="/">لوحة تحكم المدرسية</a>
+               </div>
+
+               <div class="px-3">
+                <a href="#"><i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+               </div>
+               <form action="" class="d-none d-md-block">
+                <input type="text" class="form-control" placeholder="اكتب  ما تريد البحث عنه">
+               </form>
+            </div>
+
+
+
+            <div class="left-header d-flex align-items-center gap-3 px-3">
+                <div class="icons d-flex gap-3">
+                    <a href=""><i class="fa-regular fa-comment"></i></a>
+                    <a class="position-relative massge"  href=""><i class="fa-regular fa-envelope"></i></a>
+                    <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                    <a href=""><i class="fa-regular fa-moon"></i></a>
+                </div>
+
+
+                <div class="avatar">
+                    <img  src="images/avatar.png" alt="">
+                </div>
+
+                
+              <a data-bs-toggle="offcanvas" href="#user-online" ><i class="fa-solid fa-bars-staggered active-user"></i></a>
+
+            </div>
+        </header>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="profile mb-3">
+            <img src="images/avatar.png" alt="">
+            <h3>عمار العلي</h3>
+        </div>
+        <div class="ul-sidebar">
+            <ul>
+                <li class="mb-2">
+                    <i class="fa-regular fa-house fs-5"></i>
+                    <a href="/" class="m-r-10">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2">
+                   <i class="fa-solid fa-key"></i>
+                    <a href="" class="m-r-10">الصلاحيات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-users"></i>
+                    <a href="students.html" class="m-r-10">كافة الطلاب</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <a href="" class="m-r-10">المدرسين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="" class="m-r-10">المستخدمين </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="" class="m-r-10">الكتب الدراسية </a>
+                </li>
+                  <li class="mb-2">
+                    <i class="fa-solid fa-blog"></i>
+                    <a href="blog.html" class="m-r-10">المدونة</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gears"></i>
+                    <a href="" class="m-r-10">الإعدادات</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content p-3" id="content">
+        <div class="inner-content">
+            <div class="container-fluid">
+                <h4>إضافة مقال جديد</h4>
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="card p-3">
+
+                            <form action="">
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="" >اسم المقال</label>
+                                    <input type="text" placeholder="الرجاء إدخال اسم المقال" class="form-control">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" >اسم اللطيف</label>
+                                    <input type="text" placeholder="الرجاء إدخال رابط المقال" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="" >التصنيف</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected disabled>الرجاء اختيار التنصنيف</option>
+                                            <option value="1">ثقافية</option>
+                                            <option value="2">تقنية</option>
+                                            <option value="3">علمية</option>
+                                        </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="" >الكلمات المفتاحية"تاغات"</label>
+                                   <select class="js-example-basic-multiple form-select" multiple="multiple" name="states[]">
+                                            <option value="AL">تصميم</option>
+                                            <option value="AL"> عملي </option>
+                                            <option value="AL"> نهايات </option>
+                                            <option value="AL"> تطبيق  </option>
+                                            </select>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                      <div class="mb-3">
+                                        <label for="formFile" class="form-label">تحميل صورة المقال</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                      <div class="mb-3">
+                                        <label for="formFile" class="form-label">تحميل صورة البنر</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <textarea name="editor" id="editor" class="form-control"></textarea>
+                            </div>
+
+                            </form>
+                   
+                        </div>
+                    </div>
+                </div>
+      
+               
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+            
+             <!-- user online list -->
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="user-online" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                       <div style="width: 10px; height: 10px;" class="spinner-grow text-success mx-2" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                            
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين النشطين </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="item-side-menu mb-2">
+
+                        
+                        <div class="info-users position-relative">
+                            <img src="images/avatar.png" alt=""> 
+                            <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <h4>عمار العلي</h4>
+                        </div>
+                        <div class="contact-users">
+                            <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
+                            <i class="fa-brands fa-facebook-messenger icon-messenger"></i>
+                        </div>
+                     </div>
+                </div>
+                </div>
+
+
+
+
+
+
+
+
+  
+
+
+<script src="assets/js/datatables.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   <script src="assets/js/charts.js"></script>
+   <script src="assets/js/bootstrap.js"></script> 
+   <script src="assets/js/script.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0/dist/js/select2.min.js"></script>
+   <script>
+   $(document).ready(function() {
+    $('.js-example-basic-multiple').select2({
+        tags:true,
+           maximumSelectionLength: 3,
+    });
+        });
+        </script>
+
+      
+
+
+<script type="importmap">
+    {
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/"
+        }
+    }
+
+</script>
+
+<script type="module">
+    import {
+        ClassicEditor,
+        Essentials,
+        Bold,
+        Italic,
+        Underline,
+        Strikethrough,
+        Subscript,
+        Superscript,
+        Font,
+        Paragraph,
+        CodeBlock,
+        Link,
+        List,
+        Image,
+        ImageToolbar,
+        ImageCaption,
+        ImageStyle,
+        ImageResize,
+        Table,
+        TableToolbar,
+        MediaEmbed,
+        BlockQuote,
+        Alignment,
+        Highlight,
+        RemoveFormat,
+        Heading,
+        TodoList,
+        Indent,
+        IndentBlock
+    } from 'ckeditor5';
+
+    ClassicEditor
+        .create(document.querySelector('#editor'), {
+            plugins: [
+                Essentials, Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Font, Paragraph, CodeBlock,
+                Link, List, Image, ImageToolbar, ImageCaption, ImageStyle, ImageResize, Table, TableToolbar,
+                MediaEmbed, BlockQuote, Alignment, Highlight, RemoveFormat, Heading, TodoList, Indent, IndentBlock
+            ],
+            toolbar: {
+                items: [
+                    'undo', 'redo',
+                    '|',
+                    'heading',
+                    '|',
+                    'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                    '|',
+                    'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'code',
+                    '|',
+                    'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                    '|',
+                    'alignment',
+                    '|',
+                    'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
+                    '|',
+                    'insertTable', 'mediaEmbed',
+                    '|',
+                    'highlight', 'removeFormat'
+                ],
+                shouldNotGroupWhenFull: true
+            },
+            image: {
+                toolbar: [
+                    'imageTextAlternative', 'toggleImageCaption', 'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', 'linkImage'
+                ]
+            },
+            table: {
+                contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+            },
+            language: {
+                lnguage: 'ar',
+                languageDirection: 'rtl'
+            }
+        })
+        .then(editor => {
+            console.log('Editor was initialized', editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+
+</body>
+</html>

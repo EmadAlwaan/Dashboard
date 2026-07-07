@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كافة الطلاب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/alomda.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+     <script>
+        window.onload = function(){
+            setTimeout(function(){
+
+                document.getElementById("loading").style.display = "none";
+            },2000);
+        };
+    </script>
+</head>
+<body>
+
+      <div class="" id="loading">
+        <img width="90" src="images/hearts.svg" alt="">
+    </div>
+    
+  <div class="main-wrapper">
+    <nav class="fixed-top">
+        <header class="header d-flex justify-content-between py-1">
+
+
+            <div class="right-header d-flex align-items-center gap-3">
+               <div class="logo d-none d-md-block">
+                <a href="/">لوحة تحكم المدرسية</a>
+               </div>
+
+               <div class="px-3">
+                <a href="#"><i class="fa-solid fa-chart-bar" id="toggle-sidebar"></i></a>
+               </div>
+               <form action="" class="d-none d-md-block">
+                <input type="text" class="form-control" placeholder="اكتب  ما تريد البحث عنه">
+               </form>
+            </div>
+
+
+
+            <div class="left-header d-flex align-items-center gap-3 px-3">
+                <div class="icons d-flex gap-3">
+                    <a href=""><i class="fa-regular fa-comment"></i></a>
+                    <a class="position-relative massge"  href=""><i class="fa-regular fa-envelope"></i></a>
+                    <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                    <a href=""><i class="fa-regular fa-moon"></i></a>
+                </div>
+
+
+                <div class="avatar">
+                    <img  src="images/avatar.png" alt="">
+                </div>
+
+                
+              <a data-bs-toggle="offcanvas" href="#user-online" ><i class="fa-solid fa-bars-staggered active-user"></i></a>
+
+            </div>
+        </header>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="profile mb-3">
+            <img src="images/avatar.png" alt="">
+            <h3>عمار العلي</h3>
+        </div>
+        <div class="ul-sidebar">
+            <ul>
+                <li class="mb-2">
+                    <i class="fa-regular fa-house fs-5"></i>
+                    <a href="/" class="m-r-10">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2">
+                   <i class="fa-solid fa-key"></i>
+                    <a href="" class="m-r-10">الصلاحيات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-users"></i>
+                    <a href="students.html" class="m-r-10">كافة الطلاب</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <a href="" class="m-r-10">المدرسين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="" class="m-r-10">المستخدمين </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-book"></i>
+                    <a href="" class="m-r-10">الكتب الدراسية </a>
+                </li>
+                  <li class="mb-2">
+                    <i class="fa-solid fa-blog"></i>
+                    <a href="blog.html" class="m-r-10">المدونة</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-gears"></i>
+                    <a href="" class="m-r-10">الإعدادات</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="content p-3" id="content">
+        <div class="inner-content">
+            <div class="container-fluid">
+                <h4>كافة الطلاب</h4>
+                <button type="button" class="btn btn-primary  my-3" data-bs-toggle="modal" data-bs-target="#Add-student">
+                    إضافة طالب جديد
+                    </button>
+                <div class="row">
+                    <div class="col">
+                        <div class="card p-3">
+                     <table id="example" class="table table-striped table-hover display">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">اسم الطالب</th>
+                            <th scope="col">الهاتف</th>
+                            <th scope="col">الإيميل</th>
+                            <th scope="col">الحالة</th>
+                            <th scope="col">الصورة</th>
+                            <th scope="col">العمليات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>محمود الأسمر</td>
+                            <td>015255254</td>
+                            <td>mo@gmail.com</td>
+                            <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                فعال</td>
+                            <td>
+                                <img class="rounded-circle" width="50" src="images/student/55.png" alt="">
+                            </td>
+                              <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>محمود الخالدي</td>
+                            <td>015258254</td>
+                            <td>mod@gmail.com</td>
+                              <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                فعال</td>
+                                
+                            <td><img class="rounded-circle" width="50" src="images/student/55.png" alt=""></td>
+                               
+                            <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>عبدالله خاطر</td>
+                            <td>015277254</td>
+                            <td>abd@gmail.com</td>
+                             <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                فعال</td>
+                            <td><img class="rounded-circle" width="50" src="images/student/55.png" alt=""></td>
+                             <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                        
+                            <tr>
+                            <th scope="row">4</th>
+                            <td>عماد عمر</td>
+                            <td>015312254</td>
+                            <td>emad@gmail.com</td>
+                             <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                 غير فعال</td>
+                            <td><img class="rounded-circle" width="50" src="images/student/55.png" alt=""></td>
+                             <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                        
+                            <tr>
+                            <th scope="row">5</th>
+                            <td>فادي عامر</td>
+                            <td>015456254</td>
+                            <td>ff@gmail.com</td>
+                             <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                فعال</td>
+                            <td><img class="rounded-circle" width="50" src="images/student/55.png" alt=""></td>
+                                 <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                        
+                            <tr>
+                            <th scope="row">6</th>
+                            <td>حمزة كلاب</td>
+                            <td>015264754</td>
+                            <td>hams@gmail.com</td>
+                             <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-danger" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                 غيرفعال</td>
+                            <td><img class="rounded-circle" width="50" src="images/student/55.png" alt=""></td>
+                             <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                        
+                            <tr>
+                            <th scope="row">7</th>
+                            <td>سالم عبد الهادي</td>
+                            <td>015725254</td>
+                            <td>salem@gmail.com</td>
+                             <td>
+                                <div style="width: 10px; height: 10px;" class="spinner-grow text-success" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                                فعال</td>
+                            <td><img class="rounded-circle" width="50" src="images/student/55.png" alt=""></td>
+                             <td>
+                                    <div class="dropdown">
+                                <button class="btn btn-warning dropdown-toggle btn-sm" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    العمليات
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#Edit-student" data-bs-toggle="modal"> تعديل</a></li>
+                                    <li><a class="dropdown-item" href="#">التفاصيل</a></li>
+                                    <li><a class="dropdown-item"  href="#delete-student" data-bs-toggle="modal">حذف</a></li>
+                                </ul>
+                                </div>
+
+                            </td>
+                            </tr>
+                        
+                        </tbody>
+                        </table>
+
+                        </div>
+                    </div>
+                </div>
+      
+               
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- start add student -->
+   
+<!-- Modal -->
+<div class="modal fade" id="Add-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">إضافة طالب جديد</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <form>
+
+            <div class="row">
+                 <div class="mb-3 col">
+                    <label  class="form-label">إسم الطالب</label>
+                    <input type="text" class="form-control"   placeholder=" الرجاء إدخال اسم الطالب">
+                
+                </div>
+                <div class="mb-3 col">
+                    <label  class="form-label"> البريد الإلكتروني</label>
+                    <input type="email" class="form-control" placeholder=" الرجاء إدخال اسم البريدالإلكتروني">
+                </div>
+
+            </div>
+                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">رقم الهاتف</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div>
+                    <label class="form-label">التفاصيل</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                <label for="formFile" class="form-label">تحميل صورة الطالب</label>
+                <input class="form-control" type="file" id="formFile">
+                </div>
+                
+                </form>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        <button type="button" class="btn btn-primary">حفظ بيانات الطالب</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- end add student -->
+
+
+
+
+  <!-- start Edit student -->
+   
+<!-- Modal -->
+<div class="modal fade" id="Edit-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">تعديل بيانات الطالب </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <form>
+
+            <div class="row">
+                 <div class="mb-3 col">
+                    <label  class="form-label">إسم الطالب</label>
+                    <input type="text" class="form-control"   value="محمود الأسمر">
+                
+                </div>
+                <div class="mb-3 col">
+                    <label  class="form-label"> البريد الإلكتروني</label>
+                    <input type="email" class="form-control" value="	mo@gmail.com">
+                </div>
+
+            </div>
+                
+                <div class="mb-3">
+                    <label  class="form-label">رقم الهاتف</label>
+                    <input type="text" class="form-control"  value="	015255254">
+                </div>
+
+                <div>
+                    <label class="form-label">التفاصيل</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                <label for="formFile" class="form-label">تحميل صورة الطالب</label>
+                <input class="form-control" type="file" id="formFile">
+                </div>
+                
+                </form>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+        <button type="button" class="btn btn-primary">حفظ التعديل</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- end Edit student -->
+
+
+
+  <!-- start delete student -->
+   
+<!-- Modal -->
+<div class="modal fade" id="delete-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">حذف بيانات الطالب </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+        <form >
+            <div class="alert alert-danger">
+                هل أنت متأكد من حذف بيانات الطالب
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                 <button type="button" class="btn btn-primary">حذف الطالب</button>
+             </div>
+          
+       </form>
+  
+      </div>
+      
+    </div>
+  </div>
+</div>
+  <!-- end delete student -->
+
+
+
+
+
+            
+             <!-- user online list -->
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="user-online" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                       <div style="width: 10px; height: 10px;" class="spinner-grow text-success mx-2" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                            
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">المستخدمين النشطين </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="item-side-menu mb-2">
+
+                        
+                        <div class="info-users position-relative">
+                            <img src="images/avatar.png" alt=""> 
+                            <div style="width: 10px; height: 10px;" class="spinner-grow text-success grow-user" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <h4>عمار العلي</h4>
+                        </div>
+                        <div class="contact-users">
+                            <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
+                            <i class="fa-brands fa-facebook-messenger icon-messenger"></i>
+                        </div>
+                     </div>
+                </div>
+                </div>
+
+
+
+
+
+
+<script src="assets/js/datatables.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+   <script src="assets/js/charts.js"></script>
+   <script src="assets/js/bootstrap.js"></script> 
+   <script src="assets/js/script.js"></script>
+   <script src="assets/js/tablesrsepons.js"></script>
+</body>
+</html>
